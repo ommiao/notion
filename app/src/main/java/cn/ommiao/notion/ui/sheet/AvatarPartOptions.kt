@@ -51,16 +51,16 @@ fun AvatarPartOptions(sheetPeekHeight: Dp, sheetState: BottomSheetState) {
         }
     }
     LazyColumn(
-        modifier = Modifier.height(432.dp),
+        modifier = Modifier.height(320.dp),
         state = columnState
     ) {
-        itemsIndexed(AvatarPart.values()) { index, avatarPart ->
+        items(AvatarPart.values()) { avatarPart ->
             SheetDescription(text = stringResource(id = avatarPart.label))
             LazyRow(
                 contentPadding = PaddingValues(
                     start = 16.dp,
                     end = 16.dp,
-                    bottom = 16.dp
+                    bottom = 8.dp
                 ),
                 horizontalArrangement = Arrangement.spacedBy(16.dp)
             ) {

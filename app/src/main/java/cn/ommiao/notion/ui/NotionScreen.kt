@@ -1,6 +1,7 @@
 package cn.ommiao.notion.ui
 
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.*
 import androidx.compose.runtime.Composable
@@ -13,6 +14,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import cn.ommiao.notion.*
 import cn.ommiao.notion.R
+import cn.ommiao.notion.extension.clickableWithoutRipple
 import cn.ommiao.notion.model.AvatarPart
 import cn.ommiao.notion.ui.sheet.AvatarPartOptions
 import cn.ommiao.notion.ui.theme.NotionTheme
@@ -47,6 +49,7 @@ fun NotionScreen() {
 @OptIn(ExperimentalMaterialApi::class)
 @Composable
 private fun Content() {
+    val actor = LocalActor.current
     Column(Modifier.fillMaxSize()) {
         ProvideWindowInsets {
             Box(
@@ -63,7 +66,7 @@ private fun Content() {
                     contentScale = ContentScale.FillWidth,
                     colorFilter = ColorFilter.tint(color = NotionTheme.colors.textPrimary)
                 )
-                Column() {
+                Column(modifier = Modifier.fillMaxWidth()) {
                     Text(
                         text = stringResource(id = R.string.top_title),
                         color = NotionTheme.colors.textPrimary,
@@ -74,6 +77,16 @@ private fun Content() {
                             .padding(horizontal = 32.dp, vertical = 16.dp)
                     )
                     AvatarPreview(modifier = Modifier.padding(top = 32.dp))
+                    Box(modifier = Modifier.fillMaxWidth().padding(16.dp)) {
+                        Row(modifier = Modifier.align(Alignment.Center)) {
+                            AvatarActionIcon(
+                                drawableRes = R.drawable.ic_dice,
+                                contentDescription = stringResource(R.string.dice_description)
+                            ) {
+                                actor(Action.RandomAvatar)
+                            }
+                        }
+                    }
                 }
             }
         }

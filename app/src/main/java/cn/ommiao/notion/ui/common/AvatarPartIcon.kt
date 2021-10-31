@@ -32,7 +32,7 @@ fun AvatarPartIcon(
     onClick: () -> Unit
 ) {
     Card(
-        shape = RoundedCornerShape(16.dp),
+        shape = RoundedCornerShape(12.dp),
         backgroundColor = NotionTheme.colors.iconCardBackground,
         elevation = elevation,
         onClick = onClick
@@ -45,8 +45,8 @@ fun AvatarPartIcon(
             val dotColor = NotionTheme.colors.iconCardSelectedDot
             Canvas(
                 modifier = Modifier
-                    .padding(12.dp)
-                    .size(12.dp)
+                    .padding(8.dp)
+                    .size(8.dp)
                     .align(Alignment.TopEnd)
             ) {
                 drawCircle(color = dotColor, alpha = alpha)
@@ -55,7 +55,7 @@ fun AvatarPartIcon(
                 painter = painterResource(id = drawableRes),
                 contentDescription = contentDescription,
                 modifier = Modifier
-                    .size(144.dp)
+                    .size(96.dp)
                     .padding(32.dp)
             )
         }
@@ -81,6 +81,31 @@ fun AvatarPartSmallIcon(
                 contentDescription = contentDescription,
                 modifier = Modifier
                     .size(32.dp)
+                    .padding(8.dp)
+            )
+        }
+    }
+}
+
+@OptIn(ExperimentalMaterialApi::class)
+@Composable
+fun AvatarActionIcon(
+    @DrawableRes drawableRes: Int,
+    contentDescription: String,
+    onClick: () -> Unit
+) {
+    Card(
+        shape = RoundedCornerShape(8.dp),
+        backgroundColor = NotionTheme.colors.iconCardBackground,
+        elevation = elevation,
+        onClick = onClick
+    ) {
+        Box {
+            Image(
+                painter = painterResource(id = drawableRes),
+                contentDescription = contentDescription,
+                modifier = Modifier
+                    .size(64.dp)
                     .padding(8.dp)
             )
         }

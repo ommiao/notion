@@ -14,4 +14,5 @@
     <string name="avatar_part_nose">Nose</string>
     <string name="avatar_options_title">Avatar Options</string>
     <string name="avatar_preview_description">Avatar Preview</string>
+    <string name="dice_description">Random avatart</string>
 </resources>

@@ -10,6 +10,7 @@ import cn.ommiao.notion.ui.theme.NotionTheme
 
 sealed class Action {
     object ChangeTheme : Action()
+    object RandomAvatar : Action()
     data class ChangeAvatarPart(val resource: AbstractAvatarResource) : Action()
 }
 
@@ -20,8 +21,23 @@ class MainViewModel : ViewModel() {
     fun dispatch(action: Action) {
         when (action) {
             Action.ChangeTheme -> changeTheme()
+            Action.RandomAvatar -> randomAvatar()
             is Action.ChangeAvatarPart -> changeAvatarResource(action.resource)
         }
+    }
+
+    private fun randomAvatar() {
+        state.face = Face.values().toMutableList().apply { shuffle() }.first()
+        state.nose = Nose.values().toMutableList().apply { shuffle() }.first()
+        state.mouth = Mouth.values().toMutableList().apply { shuffle() }.first()
+        state.eyes = Eyes.values().toMutableList().apply { shuffle() }.first()
+        state.eyebrows = Eyebrows.values().toMutableList().apply { shuffle() }.first()
+        state.hair = Hair.values().toMutableList().apply { shuffle() }.first()
+        state.glasses = Glasses.values().first()
+        state.beard = Beard.values().first()
+        state.accessories = Accessories.values().first()
+        state.details = Details.values().first()
+        state.festival = Festival.values().first()
     }
 
     private fun changeAvatarResource(resource: AbstractAvatarResource) {

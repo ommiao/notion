@@ -14,4 +14,5 @@
     <string name="avatar_part_nose">鼻子</string>
     <string name="avatar_options_title">选项</string>
     <string name="avatar_preview_description">头像预览</string>
+    <string name="dice_description">随即啊头像</string>
 </resources>
