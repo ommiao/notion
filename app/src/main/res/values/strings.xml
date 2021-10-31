@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Novatar</string>
+    <string name="top_title">Notion Avatar Maker</string>
+    <string name="avatar_part_accessories">Accessories</string>
+    <string name="avatar_part_beard">Beard</string>
+    <string name="avatar_part_details">Details</string>
+    <string name="avatar_part_eyebrows">Eyebrows</string>
+    <string name="avatar_part_eyes">Eyes</string>
+    <string name="avatar_part_face">Face</string>
+    <string name="avatar_part_festival">Festival</string>
+    <string name="avatar_part_glasses">Glasses</string>
+    <string name="avatar_part_hair">Hair</string>
+    <string name="avatar_part_mouth">Mouth</string>
+    <string name="avatar_part_nose">Nose</string>
+    <string name="avatar_options_title">Avatar Options</string>
+    <string name="avatar_preview_description">Avatar Preview</string>
+</resources>

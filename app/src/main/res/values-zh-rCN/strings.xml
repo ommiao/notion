@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Notion头像</string>
+    <string name="top_title">Notion头像生成器</string>
+    <string name="avatar_part_accessories">耳环</string>
+    <string name="avatar_part_beard">胡须</string>
+    <string name="avatar_part_details">细节</string>
+    <string name="avatar_part_eyebrows">眉毛</string>
+    <string name="avatar_part_eyes">眼睛</string>
+    <string name="avatar_part_face">脸型</string>
+    <string name="avatar_part_festival">节日</string>
+    <string name="avatar_part_glasses">眼镜</string>
+    <string name="avatar_part_hair">发型</string>
+    <string name="avatar_part_mouth">嘴巴</string>
+    <string name="avatar_part_nose">鼻子</string>
+    <string name="avatar_options_title">选项</string>
+    <string name="avatar_preview_description">头像预览</string>
+</resources>
